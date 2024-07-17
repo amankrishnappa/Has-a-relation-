@@ -1,0 +1,54 @@
+
+public class fish {
+	String name;
+	
+	public fish(String name)
+	{
+		this.name=name;
+	}
+	
+	void fswim()
+	{
+		System.out.println(this.name+"fish will swim");
+	}
+
+	
+	public class water{
+		String name;
+		fish f;
+		
+		public water(String name)
+		{
+			this.name=name;
+			this.f=new fish("bangude");
+		}
+		
+		void move()
+		{
+			System.out.println(this.name+"water moves");
+		}
+		
+		void makefishswim()
+		{
+			f.fswim();
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 fish fishObj = new fish("Goldfish");
+	        fish.water waterObj = fishObj.new water("Fresh");
+	        waterObj.move();
+	        waterObj.makefishswim();
+		
+
+	}
+
+}
+
+
+
+
+o/p
+
+Freshwater moves
+bangudefish will swim
